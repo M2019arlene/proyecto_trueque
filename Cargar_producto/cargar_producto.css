@@ -20,9 +20,33 @@ body{
 .container{
     max-width: 134rem;
     margin:0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
 }
 
 
+.product-details {
+  flex: 1;
+  padding: 40px; /* Agrega padding para más espacio interno */
+  background-color: #f8f9fa; /* Un color de fondo suave para destacar */
+  border-radius: 8px; /* Bordes redondeados para un mejor aspecto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+
+
+.heading-1{
+    max-width: 134rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem ;
+    font-size: 30px;
+
+    
+}
 
 .heading-2{
     max-width: 134rem;
@@ -32,7 +56,6 @@ body{
 
 
 /*header*/
-
 
 .container-hero{
     background: linear-gradient(to bottom, #757f9a, #d7dde8); 
@@ -116,6 +139,7 @@ body{
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
+
 
 
 .menu{
@@ -257,162 +281,70 @@ body{
 }
 
 
-/*main*/
-
-
-/*banner*/
-.banner{
-     background-image: url('https://www.pactoglobal-colombia.org/images/jch-optimize/ng/images_NoticiasHome_2023_PORTS__e5e35.webp');
-     height: 50rem;
-     background-size: cover;
-     background-position: center;
-}
-
-
-.content-banner{
-    max-width: 90rem;
-    margin: 0 auto;
-    padding: 20rem 0;
-    
-}
-
-.content-banner p{
-    color:#050504;
-    font-size: 2.3rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
-
-.content-banner h2{
-    color:#94d816;
-    font-size: 3.5rem;
-    font-weight: 500;
-    line-height: 1.2;  
-}
+/*fin del navbar*/
 
 
 
 
-/*Blogs*/
+/*main de contacto.html*/
 
-.blogs{
+.main-container {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.container-blogs{
-    display: grid;
-    grid-template-columns: repeat( 3, 1fr);
-    gap: 3rem;
-    
-}
-
-.card-blog{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    
-}
-
-.container-img img{
-    width: 100%;
-    border-radius: 1.3rem;
-}
-
-.card-blog .container-img{
-    border-radius: 2rem;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    
-}
-
-.card-blog .container-img img{
-    height: 270px;
-    
-}
-
-.button-group-blog{
-    position: absolute;
-    bottom: 1.5rem;
-    right: -2.5rem;
-
-    display: flex;
-    gap: 0.7rem;
-    z-index: -1;
-    transition: all .3s ease;
-}
-
-.card-blog:hover .button-group-blog{
-    z-index: 0;
-    right: 1.5rem;
-}
-
-.button-group-blog span{
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 50%;
-    transition: all .4s ease;
-
-    display:flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+  
+.main-container .container {
+    padding: 5px;
+}
+  
+
+.product-details {
+    text-align: center;
 }
 
-.button-group-blog span i{
-    font-size: 1.3rem;
+.product-details h3{
+    font-size: 1.7rem;
+    padding: 1.5rem;
 }
 
-.button-group-blog span:hover{
-    background: linear-gradient(to right, #56ab2f, #a8e063);}
-
-.button-group-blog span:hover i{
-    color: #fff;
+.product-details div{
+    font-size: 1.5rem;
+    padding: 1.3rem;
 }
 
-.content-blog h3{
-    font-size: 1.8rem;
-    margin-bottom: 1.7rem;
-    color:rgba(0, 0, 0, 0.66);
-    font-weight:500;
+.product-details textarea{
+    font-size: 1.5rem;
+    resize: none;
 }
 
-.content-blog h3:hover{
-    color: #da8e1c;
-    cursor: pointer;
-}
+  
+.contact-button {
+    margin-top: 10px;
+}  
 
-.content-blog p{
-    margin-top: 1rem;
-    font-size: 1.4rem;
-    color: #777;
-}
-
-
-.content-blog span{
-    color:#da8e1c;
-    font-size: 1.3rem;
-}
-
-.btn-read-more{
-    padding: 1rem 3rem;
-    background-color: #000000;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    border-radius: 2rem;
-    margin: 3rem 0 5rem;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.btn-read-more:hover{
-    background: linear-gradient(to right, #56ab2f, #a8e063);
-    color: #000;
-
-}
-
+.contact-button {
+    background-color: rgb(0, 189, 0); /* Fondo verde */
+    color: #fff; /* Texto blanco */
+    font-size: 1.4rem; /* Tamaño de la fuente */
+    padding: 1rem 2rem; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones */
+  }
+  
+  .contact-button:hover, .contact-button:focus {
+    transform: scale(1.1); /* Escala al pasar el ratón o enfocar */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+  }
+  
+  .contact-button:active {
+    transform: scale(0.9); /* Escala al hacer clic */
+  }
+  
 
 
 
@@ -627,23 +559,13 @@ body{
         padding: 10px;
     }
 
-    .content-banner{
-        max-width: 50rem;
-        margin: 0 auto;
-        padding: 20rem 0;
-    }
-
     
     .heading-2{
         font-size: 2.4rem;
     }
 
-
-    .container-blogs{
-        overflow: hidden;
-        grid-template-columns: 1fr 1fr;
-    }
-
+   
+   
 
     .menu-footer{
         grid-template-columns: repeat(2, 1fr);
@@ -662,10 +584,6 @@ body{
         font-size:42.5%;
     }
 
-    .section-slider{
-        max-width: 50rem;
-        padding: 2rem 0;
-    }
 
     .heading-2{
         font-size: 2.8rem;
@@ -676,7 +594,7 @@ body{
         flex-direction: column;
         position: absolute;
         z-index: 1;
-        top:161px;
+        top:165px;
         left: 0;
         width: 100%;
         align-items: center;
@@ -686,34 +604,11 @@ body{
     }
 
 
-    .content-banner{
-        max-width: 50rem;
-        padding: 20rem 0;
+    .main-container .container{
+        font-size: 2.6rem;
     }
 
-    .blogs{
-        padding: 2rem;
-    }
-
-    .container-blogs{
-        grid-template-columns: 1fr;
-    }
-
-    .content-blog h3{
-        font-size: 2.4rem;
-    }
-
-    .content-blog span{
-        font-size: 1.8rem;
-    }
-
-    .content-blog p{
-        font-size: 2.2rem;
-    }
-
-    .btn-read-more{
-        font-size: 1.8rem;
-    }
+    
 
     .contact-info ul,
     .information ul,
@@ -732,4 +627,25 @@ body{
     .content-card-product h3{
         font-size: 2.6rem;
     }
+}
+
+.contact-button {
+  background-color: rgb(0, 189, 0); /* Fondo verde */
+  color: #fff; /* Texto blanco */
+  font-size: 1.4rem; /* Tamaño de la fuente */
+  padding: 1rem 2rem; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transiciones */
+}
+
+.contact-button:hover, .contact-button:focus {
+  transform: scale(1.1); /* Escala al pasar el ratón o enfocar */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
+
+.contact-button:active {
+  transform: scale(0.9); /* Escala al hacer clic */
 }

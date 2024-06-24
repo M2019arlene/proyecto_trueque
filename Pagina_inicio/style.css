@@ -119,9 +119,13 @@ body{
     padding: 1.5rem 0;
 }
 
-.navbar .fa-bars{
+.menu-bar{
     display: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
+
+
 
 .menu{
     display: flex;
@@ -204,8 +208,6 @@ body{
     font-size: 2rem;
     color: #fff;
 }
-
-
 
 
 /*boton de publicar material*/
@@ -557,7 +559,7 @@ body{
 }
 
 .card-product{
-    background-color: #50434349;
+    background-color: #c5bfaf;
     padding: 2rem 3rem;
     border-radius: .5rem;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
@@ -640,6 +642,32 @@ body{
     cursor: pointer;
     text-align: center;
 }
+
+.content-card-product a{
+    text-decoration: none;
+    font-size: 1.31rem;
+    color:#000;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.content-card-product a::after{
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom:-3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all 3.ease;
+}
+
+.content-card-product a:hover{
+    color: #fff;
+}
+
 
 .content-card-product h3:hover{
     color: rgba(94, 241, 26, 0.911);
@@ -809,7 +837,6 @@ body{
     color: #000;
 
 }
-
 
 
 /*Footer*/
@@ -985,22 +1012,52 @@ body{
         padding: 1rem 2rem;
     }
 
-    .navbar .fa-bars{
+    .menu li{
+        list-style: none;
+    }
+
+    .menu li a{
+        list-style: none;
+        color: #fff;
+    }
+
+    .menu-bar{
         display: block;
         color:#fff;
         font-size: 3rem;
     }
 
-
     .menu{
         display: none;
     }
 
+    .navigation-responsive{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 1;
+        top:180px;
+        left: 0;
+        width: 100%;
+        align-items: center;
+        background-color: #333;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .navigation-responsive li{
+        padding: 10px;
+    }
+
+
+
     .section-slider{
         max-width: 60rem;
         margin: 0 auto;
-        padding:  2;
+        padding: 2;
     }
+
+    
 
     .container-features{
         grid-template-columns: repeat(2, 1fr);
@@ -1085,6 +1142,22 @@ body{
     .heading-2{
         font-size: 2.8rem;
     }
+
+    .navigation-responsive{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 1;
+        top:165px;
+        left: 0;
+        width: 100%;
+        align-items: center;
+        background-color: #333;
+        gap: 15px;
+        padding: 10px;
+    }
+
+
 
     .card-feature{
         flex-direction: column;

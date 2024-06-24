@@ -37,3 +37,8 @@ a{
 .input-form{
     margin-top: 5%;
 }
+
+.error{
+    font-size: 10px;
+    color: red;
+}

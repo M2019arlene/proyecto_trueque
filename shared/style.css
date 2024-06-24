@@ -40,3 +40,49 @@
 }
 
 
+@media screen and (max-width: 768px) {
+    .container-general {
+        padding-bottom: 0.5rem; /* Modifica el espacio inferior */
+    }
+
+    .container-form {
+        width: 60%; /* Modifica el ancho del contenedor del formulario */
+        padding: 1.5rem; /* Modifica el espacio interno del contenedor */
+    }
+
+    .input-form {
+        padding: 0.5rem; /* Modifica el espacio interno del input */
+    }
+
+    .form-control {
+        font-size: 1.4rem; /* Modifica el tamaño de fuente */
+    }
+
+    .genero-check {
+        padding: 1rem; /* Modifica el espacio interno del elemento con clase genero-check */
+    }
+}
+
+
+@media screen and (max-width: 468px) {
+    .container-general {
+        padding-bottom: 0.5rem; /* Modifica el espacio inferior */
+    }
+
+    .container-form {
+        width: 80%; /* Modifica el ancho del contenedor del formulario */
+        padding: 1rem; /* Modifica el espacio interno del contenedor */
+    }
+
+    .input-form {
+        padding: 0.25rem; /* Modifica el espacio interno del input */
+    }
+
+    .form-control {
+        font-size: 1.2rem; /* Modifica el tamaño de fuente */
+    }
+
+    .genero-check {
+        padding: 0.5rem; /* Modifica el espacio interno del elemento con clase genero-check */
+    }
+}

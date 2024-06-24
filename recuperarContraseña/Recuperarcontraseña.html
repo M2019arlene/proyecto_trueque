@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Recuperarcontraseña.css">
+    <link rel="icon" href="../imagenes_inicio/logo.ico">
     <title>Document</title>
 </head>
 
@@ -14,12 +15,12 @@
             <div class="input-container">
                 <h2>Recuperar contraseña</h2>
                 <label>Ingrese su correo</label>
-                <input class="input-form" type="email" name="email" id="email" required placeholder="Ingrese su correo">
-                <div class="error" id="error-email"></div>
+                <input class="input-form" type="correo" name="correo" id="correo" required placeholder="Ingrese su correo">
+                <div class="error" id="error-correo"></div>
             </div>
             <div class="btn-container">
                 <button class="btn" onclick="window.location.href='../inicioSesion/IniciarSesion.html'">Volver</button>
-                <button class="btn">Enviar</button>
+                <button onclick="return validarcorreo()">Enviar</button>
             </div>
 
         </div>
@@ -27,6 +28,7 @@
 
 
     </div>
+     <script src="./Recuperarcontraseña.js"></script>
 </body>
 
 </html>

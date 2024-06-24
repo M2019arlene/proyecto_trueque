@@ -28,3 +28,11 @@ div {
     align-items: center;
 }
 
+.error{
+    font-size: 10px;
+    color: red;
+}
+
+.container-form{
+    height: 55%;
+}

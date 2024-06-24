@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <script src="/scripts_inicio/scrollreveal.js"></script>
-    <link rel="stylesheet" href="/Blog/blog.css">
+    <script src="../scripts_inicio/scrollreveal.js"></script>
+    <link rel="stylesheet" href="../Blog/blog.css">
+    <link rel="icon" href="../imagenes_inicio/logo.ico">
+
     <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
 
 </head>
@@ -17,7 +19,7 @@
           <div class="container hero">
     
             <div class="container-logo">
-              <a href="/Pagina_inicio/home.html" class="logo-area"><img alt="logo de la marca" class="img-fluid" src="/imagenes_inicio/logo.png"></a>
+              <a href="../Pagina_inicio/index.html" class="logo-area"><img alt="logo de la marca" class="img-fluid" src="../imagenes_inicio/logo.png"></a>
             </div>
     
             <div class="container-user">
@@ -43,16 +45,17 @@
             </form>
     
     
-            <i class="fa-solid fa-bars"></i>
+            <div class="menu-bar">
+              <i class="fa-solid fa-bars"></i>
+              
+            </div> 
             <ul class="menu">
-              <li><a href="#">Categorias</a></li>
-              <li><a href="#">Publicaciones</a></li>
-              <li><a href="/Sobre_Nosotros/nosotros.html">Sobre nosotros</a></li>
+              <li><a href="../Sobre_Nosotros/nosotros.html">Sobre nosotros</a></li>
               <li><a href="#">Blog</a></li>
             </ul>
     
             <ul class="publicacion">
-              <li><a href="#" class="btn publicar">Publicar Material</a></li>
+              <li><a href="../Cargar_producto/cargar_producto.html" class="btn publicar">Publicar Material</a></li>
             </ul> 
     
           </nav>
@@ -71,14 +74,14 @@
 
 
         <section class="container blogs">
-            <h2 class="heading-2">Últimos Publicaciones</h2>
+            <h2 class="heading-2">Últimas Publicaciones</h2>
           
             <div class="container-blogs">
           
           
                 <div class="card-blog">
                   <div class="container-img">
-                    <img src="/imagenes_inicio/reciclaje.jpg" alt="imagen-blog-1">
+                    <img src="../imagenes_inicio/reciclaje.jpg" alt="imagen-blog-1">
                     <div class="button-group-blog">
                       <span>
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -101,7 +104,7 @@
           
                 <div class="card-blog">
                   <div class="container-img">
-                    <img src="/imagenes_inicio/proyectos.jpg" alt="imagen-blog-2">
+                    <img src="../imagenes_inicio/proyectos.jpg" alt="imagen-blog-2">
                     <div class="button-group-blog">
                       <span>
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -124,7 +127,7 @@
           
                 <div class="card-blog">
                   <div class="container-img">
-                    <img src="/imagenes_inicio/eventos.jpg" alt="imagen-blog-3">
+                    <img src="../imagenes_inicio/eventos.jpg" alt="imagen-blog-3">
                     <div class="button-group-blog">
                       <span>
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -239,9 +242,8 @@
                 <div class="information">
                   <p class="title-footer">Información</p>
                   <ul>
-                    <li><a href="/Sobre_Nosotros/nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="#">Publicaciones</a></li>
-                    <li><a href="/Blog/blog.html">Blog</a></li>
+                    <li><a href="../Sobre_Nosotros/nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="../Blog/blog.html">Blog</a></li>
                   </ul>
                 </div>
           
@@ -249,7 +251,7 @@
                   <p class="title-footer">Mi cuenta</p>
                   <ul>
                     <li><a href="../inicioSesion/IniciarSesion.html">Ingresar</a></li>
-                    <li><a href="#">Trocar</a></li>
+                    <li><a href="../Cargar_producto/cargar_producto.html">Trocar</a></li>
                   </ul>
                 </div>
           
@@ -268,7 +270,8 @@
             </div>
   </footer>
 
-  <script src="/scripts_inicio/efectos.js"></script>
+  <script src="../scripts_inicio/efectos.js"></script>
+  <script src="../scripts_inicio/menu-responsive.js"></script>
 
 
 </body>
