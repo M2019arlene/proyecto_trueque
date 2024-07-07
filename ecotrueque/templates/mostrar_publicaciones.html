@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecotrueque</title>
+  <link rel="stylesheet" href="../static/css/cargar_producto.css">
+  <link rel="icon" href="../static/img/logo.ico">
+
+  <script src="../static/js/scrollreveal.js"></script>
+  <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+
+<body>
+  
+    
+  <header class="main-header"> 
+    <div class="container-hero">
+      <div class="container hero">
+
+        <div class="container-logo">
+          <a href="{{ url_for('routes.index') }}"    class="logo-area"><img alt="logo de la marca" class="img-fluid" src="../static/img/logo.png"></a>
+        </div>
+
+        <div class="container-user">
+          
+          <a href="{{ url_for('routes.register') }}">Registrarse</a><i class="fa-solid fa-user"></i></a>
+          <!-- index.html -->
+          <a href="{{ url_for('routes.login') }}">Iniciar Sesión</a><i class="fa-solid fa-user"></i></a>
+
+          
+
+          <i class="fa-solid fa-heart"></i>
+          <div class="content-favorites">
+              <span class="text">Favoritos</span>
+              <span class="number">(0)</span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-navbar"> 
+      <nav class="navbar">
+        <form class="search-form">
+            <input type="search" placeholder="¿Qué estás buscando?"/>
+            <button class="btn-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+             </button>
+        </form>
+
+        <div class="menu-bar">
+          <i class="fa-solid fa-bars"></i>
+          
+        </div> 
+        <ul class="menu">
+          <li><a href="../templates/nosotros.html">Sobre nosotros</a></li>
+          <li><a href="../templates/blog.html">Blog</a></li>
+        </ul>
+
+        <ul class="publicacion">
+          
+        <!-- Enlace para Cargar Producto -->
+          <li><a href="{{ url_for('routes.cargar_producto') }}" class="btn publicar">Publicar Material</a></li>
+          
+        </ul> 
+
+      </nav>  
+      
+    </div>
+  </header>
+
+
+  
+
+
+
+
+
+
+
+<body>
+    <main class="main-container">
+    <section id="form" class="contain">
+    <h1>Detalles de la Publicación</h1>
+    <div class="publicacion">
+        <h2>{{ publicacion.titulo }}</h2>
+        <p>{{ publicacion.descripcion }}</p>
+        <img src="{{ publicacion.imagenes }}" alt="{{ publicacion.titulo }}">
+    </div>
+
+    <div class="acciones">
+        <a href="{{ url_for('routes.editar_publicacion', pub_id=publicacion.id) }}" class="btn-edit">Editar</a>
+        <form action="{{ url_for('routes.eliminar_publicacion', pub_id=publicacion.id) }}" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="btn-delete">Eliminar</button>
+        </form>
+        </section>
+     </main>
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+<footer class="footer">
+    <div class="container container-footer">
+      <div class="menu-footer">
+        <div class="contact-info">
+          <p class="title-footer">Información de Contacto</p>
+          <ul>
+            <li>Teléfono: 123-45-678</li>
+            <li>Email: Ecotrueque@gmail.com</li>
+          </ul>
+          <div class="social-icons">
+            <span class="facebook"><i class="bx bxl-facebook"></i></span>
+            <span class="twitter"><i class="bx bxl-twitter"></i></span>
+            <span class="instagram"><i class="bx bxl-instagram"></i></span>
+          </div>
+        </div>
+
+        <div class="information">
+          <p class="title-footer">Información</p>
+          <ul>
+            <li><a href="../templates/nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="../templates/blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="my-account">
+          <p class="title-footer">Mi cuenta</p>
+          <ul>
+            <li><a href="../templates/IniciarSesion.html">Ingresar</a></li>
+            <li><a href="{{ url_for('routes.cargar_producto') }}">Publicar</a></li>
+          </ul>
+        </div>
+
+        <div class="newsletter">
+          <p class="title-footer">Boletín informativo</p>
+          <div class="content">
+            <p>Suscríbete a nuestros boletines ahora y mantente al día con nuevas publicaciones para Intercambiar</p>
+            <input type="email" placeholder="Ingresa el correo aquí...">
+            <button>Suscríbete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

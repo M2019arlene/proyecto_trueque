@@ -1,0 +1,44 @@
+@import url("../css/shared/style.css");
+
+.form-mail{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.btn-container{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+
+body{
+    background-color:rgb(87, 136, 134);
+}
+*{
+    margin: 0;
+    
+}
+a{
+    text-decoration: none;
+}
+
+.input-container h2{
+    padding-bottom: 5%;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-form{
+    margin-top: 5%;
+}
+
+.error{
+    font-size: 10px;
+    color: red;
+}

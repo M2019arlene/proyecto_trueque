@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/Registro.css">
+    <link rel="icon" href="../static/img/logo.ico">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <title>Registrate</title>
+</head>
+
+<body>
+    <div class="container-general">
+        <div class="container-form">
+          <div class="input-container">
+            <h2>Registrate</h2>
+            <form method="POST" action="{{ url_for('routes.register') }}">
+                <div class="form-control">
+                    <label class="label-input">Nombre</label>
+                    <input class="input-form" type="text" id="nombre" name="nombre" required placeholder="juan">
+                </div>
+                <div class="error" id="error-nombre"></div>
+                <div class="form-control">
+                    <label class="label-input">Apellido</label>
+                    <input class="input-form" type="text" id="apellido" name="apellido" required placeholder="perez">
+                </div>
+                <div class="error" id="error-apellido"></div>
+                <div class="form-control">
+                    <label class="label-input">Correo Electrónico</label>
+                    <input class="input-form" type="email" id="correo" name="correo" required placeholder="juanito210@gmail.com">
+                </div>
+                <div class="error" id="error-correo"></div>
+                <div class="form-control">
+                    <label class="label-input">Contraseña</label>
+                    <input class="input-form" type="password" name="password" id="password" required placeholder="12345678">
+                </div>
+                <div class="error" id="error-password"></div>
+                <div class="form-control">
+                    <label class="label-input">Repita su contraseña</label>
+                    <input class="input-form" type="password" name="password_confirmation" id="password-confirmation" required placeholder="12345678">
+                </div>
+                <div class="error" id="error-password-confirmation"></div>
+                <div class="genero-check">
+                    <span>Género</span>
+                    <input class="input-form" type="radio" id="radioHombre" name="genero" value="Masculino">
+                    <label for="radioHombre">Hombre</label>
+                    <input class="input-form" type="radio" id="radioMujer" name="genero" value="Femenino">
+                    <label for="radioMujer">Mujer</label>
+                    <input class="input-form" type="radio" id="radioOtros" name="genero" value="Otros">
+                    <label for="radioOtros">Otros</label>
+                </div>
+                <div class="error" id="error-genero"></div>
+                
+                <div>
+                    <button type="submit">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../static/js/Registro.js"></script>
+</body>
+
+</html>

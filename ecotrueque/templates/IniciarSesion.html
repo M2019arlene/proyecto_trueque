@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/js/scrollreveal.js"></script>
+    <link rel="stylesheet" href="../static/css/Iniciarsesion.css">
+    <link rel="icon" href="../static/img/logo.ico">
+    <title>Inicio de Sesión</title>
+</head>  
+<body>
+    <div class="container-general">
+        <div class="container-form">
+            <div class="input-container">
+                <h2>Iniciar Sesión</h2>
+
+                <!-- Mensajes flash -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        <ul class="flashes">
+                            {% for category, message in messages %}
+                                <li class="{{ category }}">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+
+                <form method="POST" action="{{ url_for('routes.login') }}">
+                    <input class="input-form" type="email" name="correo" id="email" required placeholder="Ingrese su correo">
+                    <div class="error" id="error-email"></div>
+                    <div class="input-contraseña"> 
+                        <input class="input-form" type="password" name="password" id="password" required placeholder="Ingrese su contraseña">
+                        <div class="error" id="error-contraseña"></div>
+                    </div>
+                    <div>
+                        <button type="submit">Iniciar Sesión</button>
+                    </div>
+                </form>
+
+                <div class="form-help">
+                    <a href="../templates/Registro.html">Registrarse</a>
+                </div>
+                <div class="form-help">
+                    <a href="../templates/Recuperarcontraseña.html">¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script src="../static/js/InicioSesion.js"></script>
+    <script src="validacion.js"></script>
+    <script src="../static/js/efectos.js"></script>
+</body>
+</html>

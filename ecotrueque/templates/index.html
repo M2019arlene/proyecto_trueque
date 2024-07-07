@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecotrueque</title>
+  <link rel="stylesheet" href="../static/css/inicio.css">
+  <link rel="icon" href="../static/img/logo.ico">
+
+  <script src="../static/js/scrollreveal.js"></script>
+  <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+
+<body>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    
+  <header class="main-header"> 
+    <div class="container-hero">
+      <div class="container hero">
+
+        <div class="container-logo">
+          <a href="{{ url_for('routes.index') }}" class="logo-area"><img alt="logo de la marca" class="img-fluid" src="../static/img/logo.png"></a>
+        </div>
+
+        <div class="container-user">
+          
+          <a href="{{ url_for('routes.register') }}">Registrarse</a><i class="fa-solid fa-user"></i></a>
+          <!-- index.html -->
+          <a href="{{ url_for('routes.login') }}">Iniciar Sesión</a><i class="fa-solid fa-user"></i></a>
+
+          
+
+          <i class="fa-solid fa-heart"></i>
+          <div class="content-favorites">
+              <span class="text">Favoritos</span>
+              <span class="number">(0)</span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-navbar"> 
+      <nav class="navbar">
+        <form class="search-form">
+            <input type="search" placeholder="¿Qué estás buscando?"/>
+            <button class="btn-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+             </button>
+        </form>
+
+        <div class="menu-bar">
+          <i class="fa-solid fa-bars"></i>
+          
+        </div> 
+        <ul class="menu">
+          <li><a href="../templates/nosotros.html">Sobre nosotros</a></li>
+          <li><a href="../templates/blog.html">Blog</a></li>
+        </ul>
+
+        <ul class="publicacion">
+          
+        <!-- Enlace para Cargar Producto -->
+          <li><a href="{{ url_for('routes.cargar_producto') }}" class="btn publicar">Publicar Material</a></li>
+          
+        </ul> 
+
+      </nav>  
+      
+    </div>
+  </header>
+
+
+
+  <main class="main-content">
+ 
+  
+  <section class="section-slider">
+  <div class="container-carousel">
+    <div class="carruseles" id="slider">
+      
+        <section class="slider-section">
+          <img src="https://www.esciupfnews.com/wp-content/uploads/2020/05/dia-mundial-del-reciclaje-2020.jpg" alt="imagen1">
+        </section>
+
+        <section class="slider-section">
+          <img src="https://efeverde.com/wp-content/uploads/2024/04/Residuos-arturo-larena-para-efeverde-scaled.jpeg" alt="imagen2">
+        </section>
+
+        <section class="slider-section">
+          <img src="https://gisaico.com/wp-content/uploads/2023/05/LAS-3R-1.jpg" alt="imagen3">
+        </section>
+
+        <section class="slider-section">
+          <img src="https://www.todoelectronica.com/modules/dbblog/views/img/post/reciclaje_residuos_electronicos.jpg" alt="imagen4">
+        </section>
+    </div>
+    <div class="btn-left"><i class='bx bxs-chevrons-left'></i></div>
+    <div class="btn-right"><i class='bx bxs-chevrons-right'></i></div>
+  </div>
+
+  <script src="../static/js/sliders.js"></script>
+</section>
+
+
+
+<h1 class="heading-1">¿Cómo funciona?</h1>  
+
+
+<section class="container container-features">
+  
+  <div class="card-feature">
+    <i class='bx bxs-user-circle'></i>
+    <div class="feature-content">
+      <span>Crea tu cuenta</span>
+      <p>Inicia Sesion o registrate llenando el formulario con tus datos personales</p>
+    </div>
+  </div>
+
+  <div class="card-feature">
+    <i class='bx bxs-pencil'></i>
+    <div class="feature-content">
+      <span>Publica tu aviso</span>
+      <p>Elige una Categoría, describe tu material y detalla los materiales por los que trocarías</p>
+    </div>
+  </div>
+
+  <div class="card-feature">
+    <i class='bx bx-chat'></i>
+    <div class="feature-content">
+      <span>Intercambie mensajes</span>
+      <p>Intercambia comentarios con los demas usuarios para realizar el trueque</p>
+    </div>
+  </div>
+  
+  <div class="card-feature">
+    <i class="fa-solid fa-handshake"></i>
+    <div class="feature-content">
+      <span>Intercambia</span>
+      <p>Acuerda la forma de entrega, intercambiá y califica</p>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="container top-categorias">
+    <h2 class="heading-2">Categorías</h2>
+    <div class="container-categorias">
+      <div class="card-category category-dispositivos">
+        <p>Dispositivos electronicos</p>
+        <span>Ver más</span>
+      </div>
+      <div class="card-category category-plasticos">
+        <p>Plasticos</p>
+        <span>Ver más</span>
+      </div>
+      <div class="card-category category-madera">
+        <p>madera</p>
+        <span>Ver más</span>
+      </div>
+      <div class="card-category category-metales">
+        <p>Metal</p>
+        <span>Ver más</span>
+      </div>
+      <div class="card-category category-vehiculos">
+        <p>Partes de Vehículos</p>
+        <span>Ver más</span>
+      </div>
+      <div class="card-category category-carton">
+        <p>Cartón</p>
+        <span>Ver más</span>
+      </div>
+      <div class="card-category category-vidrio">
+        <p>Vidrio</p>
+        <span>Ver más</span>
+      </div>
+      <div class="card-category category-textil">
+        <p>Textiles</p>
+        <span>Ver más</span>
+      </div>
+      <div class="card-category category-papel">
+        <p>Papel</p>
+        <span>Ver más</span>
+      </div>
+      <div class="card-category category-envoltorio">
+        <p>Envoltorios</p>
+        <span>Ver más</span>
+      </div>
+    </div>
+</section>
+
+
+<br><br>
+
+<section class="container top-products">
+  <h2 class="heading-2">Materiales Recomendados</h2>
+
+  <div class="container-options">
+    <span class="active">Destacados</span>
+    <span>Más recientes</span>
+  </div>
+
+  <div class="container-products">
+
+    <!--producto 1-->
+    <div class="card-product">
+      <div class="container-img">
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/05/25/16850005371352.jpg" alt="latas">
+        <div class="button-group">
+          <span>
+            <i class="fa-solid fa-heart"></i>
+          </span>
+          <span>
+            <i class="fa-solid fa-share"></i>
+          </span>
+        </div>
+      </div>
+      <div class="content-card-product">
+        <h3>Latas</h3>
+        <button><a href="../templates/articulo_1.html">Ver publicación</a></button>
+      </div>
+    </div>
+
+    <!--producto2-->
+
+    <div class="card-product">
+      <div class="container-img">
+        <img src="https://i0.wp.com/qpwebsite.s3.amazonaws.com/uploads/2019/03/llantasenla.jpg?fit=1400%2C932&ssl=1" alt="llantas">
+        <div class="button-group">
+          <span>
+            <i class="fa-solid fa-heart"></i>
+          </span>
+          <span>
+            <i class="fa-solid fa-share"></i>
+          </span>
+        </div>
+      </div>
+      <div class="content-card-product">
+        <h3>Llantas</h3>
+        <button><a href="../templates/articulo_2.html">Ver publicación</a></button>
+      </div>
+    </div>
+
+    <!--producto3-->
+
+    <div class="card-product">
+      <div class="container-img">
+        <img src="https://siteccarmen.com/wp/wp-content/uploads/2020/05/Tubos-de-acero-al-carbon-1.jpg" alt="tubos">
+        <div class="button-group">
+          <span>
+            <i class="fa-solid fa-heart"></i>
+          </span>
+          <span>
+            <i class="fa-solid fa-share"></i>
+          </span>
+        </div>
+      </div>
+      <div class="content-card-product">
+        <h3>Tubos de acero</h3>
+        <button><a href="../templates/articulo_3.html">Ver publicación</a></button>
+      </div>
+    </div>
+
+    <!--producto4-->
+
+    <div class="card-product">
+      <div class="container-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Placa_Base_MicroATX.JPG/1200px-Placa_Base_MicroATX.JPG" alt="placa">
+        <div class="button-group">
+          <span>
+            <i class="fa-solid fa-heart"></i>
+          </span>
+          <span>
+            <i class="fa-solid fa-share"></i>
+          </span>
+      
+        </div>
+      </div>
+      <div class="content-card-product">
+        <h3>Motherboard</h3>
+        <button><a href="../templates/articulo_4.html">Ver publicación</a></button>
+      </div>
+    </div>
+
+
+    <!--producto5-->
+    <div class="card-product">
+      <div class="container-img">
+        <img src="https://gtaambiental.com/wp-content/uploads/pp-pet-donde-como-reciclar-plasticos-gta-ambiental-blog-img-80.jpg" alt="botellas">
+        <div class="button-group">
+          <span>
+            <i class="fa-solid fa-heart"></i>
+          </span>
+          <span>
+            <i class="fa-solid fa-share"></i>
+          </span>
+      
+        </div>
+      </div>
+      <div class="content-card-product">
+        <h3>Botellas de plastico</h3>
+        <button><a href="../templates/articulo_5.html">Ver publicación</a></button>
+      </div>
+    </div>
+
+
+
+    <!--producto6-->
+
+    <div class="card-product">
+      <div class="container-img">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_778965-MLA31120915743_062019-O.webp" alt="madera">
+        <div class="button-group">
+          <span>
+            <i class="fa-solid fa-heart"></i>
+          </span>
+          <span>
+            <i class="fa-solid fa-share"></i>
+          </span>
+      
+        </div>
+      </div>
+      <div class="content-card-product">
+        <h3>Listones de madera</h3>
+        <button><a href="../templates/articulo_6.html">Ver publicación</a></button>
+      </div>
+    </div>
+
+
+    <!--producto7-->
+    <div class="card-product">
+      <div class="container-img">
+        <img src="https://thefoodtech.com/wp-content/uploads/2022/08/embalajes-carton-scaled.jpg" alt="carton">
+        <div class="button-group">
+          <span>
+            <i class="fa-solid fa-heart"></i>
+          </span>
+          <span>
+            <i class="fa-solid fa-share"></i>
+          </span>
+      
+        </div>
+      </div>
+      <div class="content-card-product">
+        <h3>Cajas de cartón</h3>
+        <button><a href="../templates/articulo_7.html">Ver publicación</a></button>
+      </div>
+    </div>
+
+
+    <!--producto8-->
+    <div class="card-product">
+      <div class="container-img">
+        <img src="https://www.canecas.com.co/images/NOTICIAS_2020/reciclar-retazos-de-tela-2.jpg" alt="telas">
+        <div class="button-group">
+          <span>
+            <i class="fa-solid fa-heart"></i>
+          </span>
+          <span>
+            <i class="fa-solid fa-share"></i>
+          </span>
+      
+        </div>
+      </div>
+      <div class="content-card-product">
+        <h3>Telas de ropa</h3>
+        <button><a href="../templates/articulo_8.html">Ver publicación</a></button>
+      </div>
+    </div>
+
+
+     <!--producto9-->
+     <div class="card-product">
+      <div class="container-img">
+        <img src="https://lapalomahoy.uy/10-2018/resize_1539107018.jpg" alt="vidrio">
+        <div class="button-group">
+          <span>
+            <i class="fa-solid fa-heart"></i>
+          </span>
+          <span>
+            <i class="fa-solid fa-share"></i>
+          </span>
+      
+        </div>
+      </div>
+      <div class="content-card-product">
+        <h3>Botellas de vidrio</h3>
+        <button><a href="../templates/articulo_9.html">Ver publicación</a></button>
+      </div>
+     </div>
+
+
+
+      <!--producto10-->
+      <div class="card-product">
+        <div class="container-img">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Papelparamolde.jpg" alt="papel">
+          <div class="button-group">
+            <span>
+              <i class="fa-solid fa-heart"></i>
+            </span>
+            <span>
+              <i class="fa-solid fa-share"></i>
+            </span>
+        
+          </div>
+        </div>
+        <div class="content-card-product">
+          <h3>Papel madera</h3>
+          <button><a href="../templates/articulo_10.html">Ver publicación</a></button>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Nueva sección para mostrar publicaciones -->
+<section class="container top-products">
+  <h2 class="heading-2">Publicaciones Recientes</h2>
+  <div class="container-products">
+    {% for publicacion in publicaciones %}
+      <div class="card-product">
+        <div class="container-img">
+          <img src="{{ publicacion.imagenes }}" alt="{{ publicacion.titulo }}">
+          <div class="button-group">
+            <span><i class="fa-solid fa-heart"></i></span>
+            <span><i class="fa-solid fa-share"></i></span>
+          </div>
+        </div>
+        <div class="content-card-product">
+          <h3>{{ publicacion.titulo }}</h3>
+          <p>{{ publicacion.descripcion }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+<footer class="footer">
+  <div class="container container-footer">
+    <div class="menu-footer">
+      <div class="contact-info">
+        <p class="title-footer">Información de Contacto</p>
+        <ul>
+          <li>Teléfono: 123-45-678</li>
+          <li>Email: Ecotrueque@gmail.com</li>
+        </ul>
+        <div class="social-icons">
+          <span class="facebook"><i class="fa-brands fa-facebook"></i></span>
+          <span class="twitter"><i class="fa-brands fa-twitter"></i></span>
+          <span class="instagram"><i class="fa-brands fa-instagram"></i></span>
+        </div>
+      </div>
+
+      <div class="information">
+        <p class="title-footer">Información</p>
+        <ul>
+          <li><a href="../templates/nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="../templates/blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="my-acount">
+        <p class="title-footer">Mi cuenta</p>
+        <ul>
+          <li><a href="../templates/IniciarSesion.html">Ingresar</a></li>
+          <li><a href="../templates/cargar_producto.html">Trocar</a></li>
+        </ul>
+      </div>
+
+      <div class="newsletter">
+        <p class="title-footer">Boletin informativo</p>
+
+        <div class="content">
+          <p>Suscríbete a nuestros boletínes ahora y mantente al día con nuevas publicaciones para Intercambiar</p>
+          <input type="email" placeholder="Ingresa el correo aquí...">
+          <button>Suscríbete</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</footer>
+
+
+<script src="../static/js/efectos.js"></script>
+<script src="../static/js/menu-responsive.js"></script>
+
+
+</body>
+</html>
